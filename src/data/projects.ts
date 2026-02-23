@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     id: "0",
     slug: "mapito-safari-camp-serengeti",
-    title: "Mapito Safari Camp, Serengeti",
+    title: "[SAMPLE] Mapito Safari Camp, Serengeti",
     category: "Hospitality — Autograph Collection",
     serviceType: "Lead Interior Design",
     materials: ["Local Stone", "Reclaimed Timber", "Canvas", "Aged Brass"],
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     id: "1",
     slug: "serene-coastal-sanctuary",
-    title: "Serene Coastal Sanctuary",
+    title: "[SAMPLE] Serene Coastal Sanctuary",
     category: "Residential",
     serviceType: "Full Turnkey Interior",
     materials: ["Teak", "Lime Wash", "Linen"],
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     id: "2",
     slug: "modern-minimalist-loft",
-    title: "Modern Minimalist Loft",
+    title: "[SAMPLE] Modern Minimalist Loft",
     category: "Commercial",
     serviceType: "Spatial Design",
     materials: ["Polished Concrete", "Recycled Steel", "Glass"],

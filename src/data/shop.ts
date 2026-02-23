@@ -12,7 +12,7 @@ export interface ShopItem {
 export const shopItems: ShopItem[] = [
   {
     id: "s1",
-    title: "The Hand-Carved Teak Credenza",
+    title: "[SAMPLE] The Hand-Carved Teak Credenza",
     category: "Furniture",
     origin: "Arusha, Tanzania",
     material: "Solid Teak & Brass",
@@ -22,7 +22,7 @@ export const shopItems: ShopItem[] = [
   },
   {
     id: "s2",
-    title: "Organic Linen Sofa Suite",
+    title: "[SAMPLE] Organic Linen Sofa Suite",
     category: "Seating",
     origin: "Tanzania",
     material: "Hand-spun Linen",
@@ -32,7 +32,7 @@ export const shopItems: ShopItem[] = [
   },
   {
     id: "s3",
-    title: "Serengeti Dusk Bronze Lamp",
+    title: "[SAMPLE] Serengeti Dusk Bronze Lamp",
     category: "Lighting",
     origin: "Dar es Salaam",
     material: "Bronze & Parchment",

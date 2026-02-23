@@ -11,31 +11,31 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "b1",
-    title: "The Art of Conscious Living: A Sombetini Perspective",
-    slug: "conscious-living-sombetini",
+    id: "sample-1",
+    title: "[SAMPLE] The Art of Conscious Living",
+    slug: "sample-conscious-living",
     date: "February 20, 2026",
     category: "Philosophy",
-    excerpt: "How our Arusha studio is redefining luxury through the lens of sustainability and Tanzanian heritage.",
+    excerpt: "Note: This is a sample post. Chiko, please provide your actual design philosophy dispatches here.",
     content: `
-      Conscious living is not just a trend; it is a return to our roots. In the heart of Sombetini, our studio works with materials that tell a story—reclaimed teak, hand-spun linen, and local bronze. 
+      This is a placeholder for your first Studio Note. 
       
-      Luxury, in its truest form, is the harmony between our environment and our inner peace. By prioritizing artisanal craftsmanship over mass production, we create spaces that are not only beautiful but also ethically sound.
+      Suggested Topic: How your Arusha studio is redefining luxury through the lens of sustainability and Tanzanian heritage.
     `,
-    image: "/blog/conscious-living.jpg"
+    image: "/blog/sample-1.jpg"
   },
   {
-    id: "b2",
-    title: "Serengeti Dusk: Finding Inspiration in the Wild",
-    slug: "serengeti-dusk-inspiration",
+    id: "sample-2",
+    title: "[SAMPLE] Serengeti Dusk: Finding Inspiration",
+    slug: "sample-serengeti-inspiration",
     date: "February 15, 2026",
     category: "Design Journal",
-    excerpt: "Exploring the color palette of the Serengeti and how it informs our 'Rooted Luxury' aesthetic.",
+    excerpt: "Note: This is a sample post. Chiko, please provide your actual design journal entries here.",
     content: `
-      The Serengeti at dusk offers a masterclass in color theory. The transition from golden ochre to deep forest green, accented by the burnt sienna of the earth, is the foundation of our current palette.
+      This is a placeholder for your second Studio Note. 
       
-      When designing the Mapito Safari Camp, we didn't just want to place a building in the landscape; we wanted the landscape to flow through the building.
+      Suggested Topic: Exploring the color palette of the Serengeti and how it informs your 'Rooted Luxury' aesthetic.
     `,
-    image: "/blog/serengeti-inspiration.jpg"
+    image: "/blog/sample-2.jpg"
   }
 ];
