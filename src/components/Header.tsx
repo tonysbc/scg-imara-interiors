@@ -25,7 +25,7 @@ export default function Header() {
       {/* Desktop Navigation */}
       <nav className="hidden items-center gap-16 text-[10px] font-bold tracking-[0.3em] uppercase text-white/70 md:flex">
         <Link href="/#portfolio" className="hover:text-brand-gold transition-colors duration-300">Portfolio</Link>
-        <Link href="/#shop" className="hover:text-brand-gold transition-colors duration-300">Shop</Link>
+        <Link href="/shop" className="hover:text-brand-gold transition-colors duration-300">Shop</Link>
         <Link href="/about" className="hover:text-brand-gold transition-colors duration-300">About</Link>
         <Link href="/inquire" className="border border-brand-gold/40 px-8 py-3 text-brand-gold hover:bg-brand-gold hover:text-brand-green transition-all duration-500">Inquire</Link>
       </nav>
@@ -48,7 +48,7 @@ export default function Header() {
         <div className="fixed inset-0 top-[88px] z-40 bg-brand-green flex flex-col items-center justify-center gap-12 md:hidden animate-in slide-in-from-top-4 duration-300">
           <nav className="flex flex-col items-center gap-12 text-sm font-semibold tracking-[0.3em] uppercase text-white/90">
             <Link href="/#portfolio" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
-            <Link href="/#shop" onClick={() => setIsMenuOpen(false)}>Shop</Link>
+            <Link href="/shop" onClick={() => setIsMenuOpen(false)}>Shop</Link>
             <Link href="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link href="/inquire" onClick={() => setIsMenuOpen(false)} className="text-brand-gold">Inquire</Link>
           </nav>

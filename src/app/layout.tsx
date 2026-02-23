@@ -15,8 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Imara Interiors Design Co. | Conscious Luxury Interiors",
-  description: "Bespoke interior design specializing in 'Conscious Luxury' and sustainable, timeless functionality.",
+  title: {
+    default: "Imara Interiors Design Co. | Conscious Luxury Interiors",
+    template: "%s | Imara Interiors"
+  },
+  description: "Bespoke interior design from Arusha, Tanzania. Specializing in 'Conscious Luxury' and sustainable, timeless functionality. From Sombetini to the world.",
+  openGraph: {
+    title: "Imara Interiors Design Co.",
+    description: "Bespoke interior design specializing in 'Conscious Luxury' and sustainable Tanzanian heritage.",
+    url: "https://imarainteriorsdesignco.com",
+    siteName: "Imara Interiors",
+    images: [
+      {
+        url: "/imara_Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Imara Interiors Design Co."
+      }
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Imara Interiors Design Co.",
+    description: "Bespoke interior design specializing in 'Conscious Luxury' and sustainable Tanzanian heritage.",
+    images: ["/imara_Logo.png"],
+  },
 };
 
 export default function RootLayout({

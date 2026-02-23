@@ -1,6 +1,73 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+
+function InquireForm() {
+  const searchParams = useSearchParams();
+  const selectedPiece = searchParams.get("piece");
+
+  return (
+    <form className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="space-y-2 group">
+          <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Name</label>
+          <input 
+            type="text" 
+            placeholder="CHIKO"
+            className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent placeholder:text-black/5 text-sm uppercase tracking-widest"
+          />
+        </div>
+        <div className="space-y-2 group">
+          <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Email</label>
+          <input 
+            type="email" 
+            placeholder="INFO@IMARAINTERIORSDESIGNCO.COM"
+            className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent placeholder:text-black/5 text-sm uppercase tracking-widest"
+          />
+        </div>
+      </div>
+
+      <div className="space-y-2 group relative">
+        <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Project Type</label>
+        <div className="relative">
+          <select 
+            defaultValue={selectedPiece ? "Custom Furniture Inquiry" : "Residential Interior"}
+            className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent text-sm uppercase tracking-widest appearance-none cursor-pointer pr-10"
+          >
+            <option>Residential Interior</option>
+            <option>Commercial / Hospitality</option>
+            <option>Custom Furniture Inquiry</option>
+            <option>Sombetini Shop Visit</option>
+          </select>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-brand-sienna">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-2 group">
+        <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Message</label>
+        <textarea 
+          rows={4}
+          defaultValue={selectedPiece ? `I am interested in: ${selectedPiece.toUpperCase()}. Please provide more information about availability and delivery.` : ""}
+          placeholder="TELL US ABOUT YOUR VISION..."
+          className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent placeholder:text-black/5 text-sm uppercase tracking-widest resize-none"
+        />
+      </div>
+
+      <button className="w-full bg-brand-sienna py-6 text-white text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-brand-green transition-all duration-500 shadow-xl shadow-brand-sienna/10">
+        Send Inquiry
+      </button>
+    </form>
+  );
+}
+
 export default function InquirePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background text-brand-green">
       <section className="pt-56 md:pt-64 pb-32 px-8 md:px-24 max-w-7xl mx-auto">
         {/* Editorial Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-black/5 pb-8 gap-8">
@@ -56,59 +123,13 @@ export default function InquirePage() {
 
           {/* Right Column: The Form */}
           <div className="bg-white p-8 md:p-12 border border-black/5 shadow-sm">
-            <form className="space-y-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="space-y-2 group">
-                  <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Name</label>
-                  <input 
-                    type="text" 
-                    placeholder="CHIKO"
-                    className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent placeholder:text-black/5 text-sm uppercase tracking-widest"
-                  />
-                </div>
-                <div className="space-y-2 group">
-                  <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Email</label>
-                  <input 
-                    type="email" 
-                    placeholder="INFO@IMARAINTERIORSDESIGNCO.COM"
-                    className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent placeholder:text-black/5 text-sm uppercase tracking-widest"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2 group relative">
-                <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Project Type</label>
-                <div className="relative">
-                  <select className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent text-sm uppercase tracking-widest appearance-none cursor-pointer pr-10">
-                    <option>Residential Interior</option>
-                    <option>Commercial / Hospitality</option>
-                    <option>Custom Furniture Inquiry</option>
-                    <option>Sombetini Shop Visit</option>
-                  </select>
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-brand-sienna">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m6 9 6 6 6-6"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-2 group">
-                <label className="text-[9px] font-bold tracking-[0.3em] uppercase text-foreground/40 group-focus-within:text-brand-sienna transition-colors">Message</label>
-                <textarea 
-                  rows={4}
-                  placeholder="TELL US ABOUT YOUR VISION..."
-                  className="w-full border-b border-black/10 py-4 focus:outline-none focus:border-brand-sienna transition-colors bg-transparent placeholder:text-black/5 text-sm uppercase tracking-widest resize-none"
-                />
-              </div>
-
-              <button className="w-full bg-brand-sienna py-6 text-white text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-brand-green transition-all duration-500 shadow-xl shadow-brand-sienna/10">
-                Send Inquiry
-              </button>
-            </form>
+            <Suspense fallback={<div className="text-[10px] tracking-widest uppercase animate-pulse">Loading Connection...</div>}>
+              <InquireForm />
+            </Suspense>
           </div>
         </div>
       </section>
     </main>
   );
 }
+

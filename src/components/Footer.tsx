@@ -27,6 +27,7 @@ export default function Footer() {
           <div className="flex flex-col gap-8 text-[11px] tracking-[0.3em] uppercase">
             <span className="text-brand-gold font-black opacity-40">The Studio</span>
             <Link href="/about" className="text-white/60 hover:text-white transition-colors">Philosophy</Link>
+            <Link href="/blog" className="text-white/60 hover:text-white transition-colors">Studio Notes</Link>
             <Link href="/#portfolio" className="text-white/60 hover:text-white transition-colors">Projects</Link>
             <Link href="/inquire" className="text-white/60 hover:text-white transition-colors">Inquire</Link>
           </div>

@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Philosophy",
+  description: "Founded by Chiko, Imara Interiors bridges the gap between soulful aesthetics and mindful living in Arusha, Tanzania.",
+};
 
 export default function AboutPage() {
   return (
